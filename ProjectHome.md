@@ -1,0 +1,1 @@
+Try to fix lua in S.T.A.L.K.E.R. Shadows of Chernobyl
