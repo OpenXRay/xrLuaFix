@@ -1,6 +1,8 @@
 add_library(xrLuaFix STATIC)
 
 target_sources(xrLuaFix PRIVATE
+    LibCompat.cpp
+    LibCompat.h
     LibMath.cpp
     LibMath.h
     LibStr.cpp

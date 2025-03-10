@@ -6,6 +6,7 @@
 #include "LibMath.h"
 #include "LibTab.h"
 #include "Logger.h"
+#include "LibCompat.h"
 
 #include "lfs.h"
 
@@ -57,6 +58,8 @@ int luaopen_xrluafix(lua_State* L)
     // Don't touch if it's not LuaJIT either.
     if (is_luajit_one(L))
         open_math(L);
+    else
+        open_stkcompat(L);
 
     luaopen_lua_pack(L);
     luaopen_marshal(L);

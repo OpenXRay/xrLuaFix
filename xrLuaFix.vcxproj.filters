@@ -18,6 +18,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>pch</Filter>
     </ClCompile>
+    <ClCompile Include="LibCompat.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="lfs">
@@ -50,5 +51,6 @@
     <ClInclude Include="pch.hpp">
       <Filter>pch</Filter>
     </ClInclude>
+    <ClInclude Include="LibCompat.h" />
   </ItemGroup>
 </Project>
