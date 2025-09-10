@@ -46,5 +46,5 @@ target_precompile_headers(xrLuaFix
 
 set_target_properties(xrLuaFix PROPERTIES
     PREFIX ""
-    POSITION_INDEPENDENT_CODE ON
+    POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS}
 )
