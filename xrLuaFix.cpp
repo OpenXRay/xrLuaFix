@@ -33,7 +33,13 @@ int luaopen_xrluafix(lua_State* L)
 
     luaopen_lua_pack(L);
     luaopen_marshal(L);
+
+    // luafilesystem adheres to modules-create-no-globals
+    // (https://github.com/lunarmodules/luafilesystem/commit/8e7217e74fbe5da0a9c1fee03d191b5a0266cedd),
+    // thus requiring you to write "local lfs = require("lfs")" in scripts.
     luaopen_lfs(L);
+    // But we want to create globals exactly, so that you can use it right away.
+    lua_setglobal(L, "lfs");
 
     return 0;
 }
